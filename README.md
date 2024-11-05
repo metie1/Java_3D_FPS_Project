@@ -1,4 +1,4 @@
-# Tut3D
+# Java_3D_FPS_Project
 
 A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/tommyettinger/gdx-liftoff).
 
