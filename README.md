@@ -76,24 +76,6 @@ java -jar client.jar
 - TCP 포트: 14150
 - UDP 포트: 18473
 
-## 프로젝트 구조
-
-주요 패키지 구조:
-```
-src/
-├── main/
-│   └── java/
-│       └── com/
-│           └── monstrous/
-│               └── tut3d/
-│                   ├── client/        # 클라이언트 관련 코드
-│                   ├── server/        # 서버 관련 코드
-│                   ├── net/           # 네트워크 통신
-│                   ├── physics/       # 물리 엔진
-│                   ├── gui/           # 사용자 인터페이스
-│                   └── effects/       # 시각 효과
-```
-
 ## 실행 화면
 
 [스크린샷이나 GIF 추가 예정]
