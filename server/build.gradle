@@ -1,0 +1,40 @@
+apply plugin: 'application'
+
+java {
+  sourceCompatibility = JavaVersion.VERSION_11
+  targetCompatibility = JavaVersion.VERSION_11
+}
+
+dependencies {
+  implementation project(":core")
+  implementation "com.esotericsoftware:kryonet:2.22.0-RC1"
+  implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+  implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+}
+
+application {
+  mainClass = 'com.game.fps.server.ServerLauncher'
+  applicationDefaultJvmArgs = [
+    '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+    '--add-opens', 'java.base/java.nio=ALL-UNNAMED',
+    '--add-opens', 'java.base/java.util=ALL-UNNAMED'
+  ]
+}
+
+jar {
+  manifest {
+    attributes 'Main-Class': 'com.game.fps.server.ServerLauncher'
+  }
+
+  from {
+    configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+  }
+
+  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+// 서버 실행 시 콘솔 출력을 즉시 보이게 설정
+run {
+  standardInput = System.in
+  jvmArgs = applicationDefaultJvmArgs
+}

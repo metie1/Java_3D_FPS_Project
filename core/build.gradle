@@ -1,0 +1,17 @@
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+eclipse.project.name = appName + '-core'
+
+dependencies {
+  api "com.badlogicgames.gdx-controllers:gdx-controllers-core:$gdxControllersVersion"
+  api "com.badlogicgames.gdx:gdx:$gdxVersion"
+  api "com.github.antzGames:gdx-ode4j:master-SNAPSHOT"
+  api "com.github.mgsx-dev.gdx-gltf:gltf:$gdxGltfVersion"
+  api "de.golfgl.gdxcontrollerutils:gdx-controllerutils-mapping:$controllerMappingVersion"
+  api "de.golfgl.gdxcontrollerutils:gdx-controllerutils-scene2d:$controllerScene2DVersion"
+
+  // KryoNet
+  implementation 'com.esotericsoftware:kryonet:2.22.0-RC1'
+  implementation 'com.esotericsoftware:kryo:5.5.0'
+  implementation 'com.esotericsoftware:minlog:1.3.1'
+
+}
