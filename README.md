@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/6255ff68-7b54-481f-a237-833588a6ab46)# 3D 멀티플레이어 FPS 게임
+# 3D 멀티플레이어 FPS 게임
 
 LibGDX와 Kryonet을 사용하여 개발된 3D 멀티플레이어 FPS 게임입니다. Counter-Strike에서 영감을 받아 팀 기반 게임플레이와 폭탄 설치/해체 메커니즘을 구현했습니다.
 
